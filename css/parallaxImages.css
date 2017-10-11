@@ -1,0 +1,14 @@
+.image{
+	width: 100%;
+}
+
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
+}
+
+.picture_header{
+	background-color: #000;
+	opacity: 0.3;
+  filter: alpha(opacity=30);
+}
