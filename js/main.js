@@ -6,14 +6,19 @@
       })
 
         // Sticky Header
+
+
         $(window).scroll(function() {
 
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 400) {
                 $('.main_header').addClass('sticky');
+                $('.main_header').removeClass('sticky2');
             } else {
+                $('.main_header').addClass('sticky2');
                 $('.main_header').removeClass('sticky');
             }
         });
+
 
         // Mobile Navigation
         $('.mobile-toggle').click(function() {
@@ -145,6 +150,7 @@
           duration:40
 
         });
+          $('.main_header').addClass('sticky2');
 
       });
 
@@ -246,5 +252,10 @@
           $("#contact_form input, #contact_form textarea").css('border-color','');
           $("#result").slideUp();
       });
+
+      //Social media modal
+      $('.social_media').on('shown.bs.modal', function () {
+        $('#media_modal').focus()
+      })
 
   });
