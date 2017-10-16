@@ -91,7 +91,7 @@ a:hover{
 }
 
 .picture_aboutMe{
-  background-image: url(../img/me.jpg);
+  background-image: url(img/me.jpg);
   background-position: center top;
   border-radius: 50%;
   -moz-border-radius: 50%;
