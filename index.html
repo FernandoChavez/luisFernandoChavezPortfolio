@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/skillset.css">
 
     <!-- Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Crete+Round|Istok+Web|Lato|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Crete+Round|Istok+Web|Lato|Lobster|Open+Sans" rel="stylesheet">
 
     <!-- Textillate -->
     <link rel="stylesheet" href="assets/animate.css">
@@ -60,13 +60,13 @@
       <nav>
         <ul class="main_menu">
           <li><a href=".containerHeader">Home</a></li>
-          <li><a href=".service_area">About me</a></li>
+          <li><a href=".about_me">About me</a></li>
           <li><a href=".blog_area">Skills</a></li>
           <li><a href=".price_area">Experience</a></li>
           <li><a href=".portfolio_area">Portfolio</a></li>
           <li><a href=".testimonial_area">Smash</a></li>
           <li><a href="" data-toggle="modal" data-target="#contact_area">Contact me</a></li>
-          <li><a href="https://facebook.com/IIFerchoII"><img src="img/logos/facebook-white.png" width="17" height="17" class="d-inline-block align-top" alt="Facebook"></a></li>
+          <li><a href=""><img src="img/logos/facebook-white.png" width="17" height="17" class="d-inline-block align-top" alt="Facebook"></a></li>
           <li><a href="https://twitter.com/DevLuisFernando"><img src="img/logos/twitter-white.png" width="15" height="17" class="d-inline-block align-top" alt="Twitter"></a></li>
           <li><a href="https://linkedin.com/in/luis-fernando-chávez-morales-1b7400103"><img src="img/logos/linkedin-white.png" width="17" height="17" class="d-inline-block align-top" alt="Linkedin"></a></li>
           <li><a href="https://github.com/FernandoChavez"><img src="img/logos/github-white.png" width="17" height="17" class="d-inline-block align-top" alt="Github"></a></li>
@@ -83,9 +83,10 @@
 <!-- Modal Contact Me-->
 <div class="modal fade" id="contact_area" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">CONTACT ME</h3>
+    <div class="modal-content contactBackground">
+      <div class="modal-header headerModal">
+        <img src="../img/logos/mail.png" width="65" height="65" class="d-inline-block align-top messageLoge" alt="">
+        <h3 class="modal-title titleContact" id="exampleModalLabel">CONTACT ME</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -93,31 +94,31 @@
       <div class="modal-body">
 
         <form>
-          <div class="form-group">
-            <label for="name" class="titleInput">Enter your Name:</label>
+          <div class="form-group inputMargin">
+            <label for="name" class="leftText">Enter your Name:*</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="namelHelp" placeholder="Enter Name" required>
           </div>
-          <div class="form-group">
-            <label for="email" class="titleInput">Enter your Email:</label>
+          <div class="form-group inputMargin">
+            <label for="email" class="leftText">Enter your Email:*</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailEmail" placeholder="Enter email" required>
-            <small id="emailEmail" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
-          <div class="form-group">
-            <label for="businnes" class="titleInput">Business about::</label>
+          <div class="form-group inputMargin">
+            <label for="businnes" class="leftText">Business about:*</label>
             <select class="form-control" id="exampleFormControlSelect1">
               <option>Development</option>
               <option>Smash</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="subject" class="titleInput">Enter your Subject:</label>
+          <div class="form-group inputMargin">
+            <label for="subject" class="leftText">Enter your Subject:*</label>
             <input type="text" class="form-control" id="exampleInputSubject" aria-describedby="subjectlHelp" placeholder="Enter Subject" required>
           </div>
-          <div class="form-group">
-            <label for="message" class="titleInput">Enter your message:</label>
-            <textarea class="form-control" rows="5" id="message" aria-describedby="messagelHelp" placeholder="Enter your message" required></textarea>
+          <div class="form-group inputMargin">
+            <label for="message" class="leftText">Enter your message:*</label>
+            <textarea class="form-control" rows="6" id="message" aria-describedby="messagelHelp" placeholder="Enter your message" required></textarea>
           </div>
           <button type="submit" class="btn btn-success">Submit</button>
+          <button type="button" class="btn btn-secundary" data-dismiss="modal">Close</button>
         </form>
       </div>
     </div>
@@ -127,7 +128,7 @@
 
 <!-- Header-->
 <div class="containerHeader">
-  <div class="image parallax-window imageHeader" data-position-Y="center" data-speed="0.4" data-parallax="scroll" data-image-src="img/header/bg7.jpeg">
+  <div class="image parallax-window imageHeader" data-position-Y="center" data-speed="0.3" data-parallax="scroll" data-image-src="img/header/bg7.jpeg">
     <div class="welcome"><p data-in-effect="rollIn">WELCOME EVERYONE!!!</p></div>
     <div class="this_is"><p>Here Fernando and I like web development and video edition</p></div>
     <div class="website_contruction"><p>(This website is still in contruction)</p></div>
@@ -137,7 +138,14 @@
 <div class="about_me">
   <div class="container">
     <div class="row">
+      <div class="aboutMe_section wow bounceInRight animated">
+        <div class="col-lg- col-md-5 col-sm-5">
+           <div class="picture_aboutMe">
 
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-7 description_ aboutMe"></div>
     </div>
   </div>
 </div>
