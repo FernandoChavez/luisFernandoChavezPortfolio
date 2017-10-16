@@ -1,8 +1,15 @@
         // loader
       $(window).load(function() { // makes sure the whole site is loaded
-      $('.cssload-battery').fadeOut(); // will first fade out the loading animation
-      $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-      $('body').delay(350).css({'overflow':'visible'});
+        $('.cssload-battery').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow':'visible'});
+
+        //My textillate animations
+        $('.welcome').textillate({ initialDelay: 400, in: { effect: 'fadeInLeft', delayScale: 0.4} });
+        $('.this_is').textillate({ initialDelay: 800, in: { effect: 'fadeInLeft', delayScale: 0.4} });
+        $('.website_contruction').textillate({ initialDelay: 1200, in: { effect: 'bounceInLeft', delayScale: 0.9} });
+
+
       })
 
         // Sticky Header
