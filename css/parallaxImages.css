@@ -6,3 +6,14 @@
     min-height: 800px;
     background: transparent;
 }
+
+.parallax-window-min {
+    background: transparent;
+}
+
+.parallax-window-smash{
+		background: transparent;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+}

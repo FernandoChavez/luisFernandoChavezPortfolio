@@ -151,13 +151,12 @@
 
       $(document).ready(function(){
 
-        $("#skillset").skillset({
 
-          object:object,
-          duration:40
-
-        });
           $('.main_header').addClass('sticky2');
+
+          $(window).on('shown.bs.tab', function() {
+            $(window).trigger('resize.px.parallax');
+          });
 
       });
 

@@ -23,6 +23,11 @@ a:hover{
 }
 
 
+footer{
+  background-color: black;
+  height: 400px;
+}
+
 /*============== Preloader ==============*/
 
 /* Preloader */
@@ -49,7 +54,7 @@ a:hover{
   margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
 
-.leftText{
+.justifyText{
   text-align: justify;
   width: 100%;
   color: rgb(70, 70, 70);
@@ -67,9 +72,23 @@ a:hover{
     font-weight: bold;
     font-size:20px;
 }
-.headerModal{
-  background-color: rgb(36, 113, 163);
+
+.titleModalSmash{
+    padding-top:45px;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size:20px;
 }
+
+.headerModal{
+  background-color: rgb(52, 73, 94);
+}
+
+.headerModalSmash{
+  background-color: rgb(211, 123, 161);
+}
+
 .messageLoge{
   position: absolute;
   margin: 0 auto;
@@ -82,17 +101,24 @@ a:hover{
 }
 
 .contactBackground{
-  background-color: rgba(250,250,250, 1);
+  background-color: rgba(245,245,245, 1);
 
 }
+div > div > div> .titleSmash{
+  -webkit-text-fill-color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+}
 
-.about_me div div div .picture_aboutMe{
-
+.titleSmash{
+  font-size:60px;
+  -webkit-text-stroke: 2px #000000;
 }
 
 .picture_aboutMe{
   background-image: url(img/me.jpg);
-  background-position: center top;
+  background-position: 55% 27%;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -101,14 +127,158 @@ a:hover{
   width: 100%;
   padding-top: 100%;
   box-shadow: 10px 12px 6px #aaaaaa;
-  margin-top:25%;
-  margin-bottom:25%;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
 }
 
-.aboutMe_section{
-  padding-top: : 20%;
-  padding-bottom: 20%;
+
+
+.picture_aboutFuerzaDON{
+  background-image: url(img/FuerzaDON/fuerzadon.jpg);
+  background-position: 40% 15%;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: auto;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  box-shadow: 10px 12px 20px #000;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+}
+
+.picture_aboutShulk{
+  background-image: url(img/FuerzaDON/normalShulk.png);
+  background-position: 40% 15%;
+  height: auto;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  -webkit-transition: width 6s; /* Safari */
+  transition: width 6s;
+
+}
+
+
+.picture_aboutShulk:hover{
+  background-image: url(img/FuerzaDON/meliaShulk.png);
+}
+
+
+.carousel-shadow{
+  box-shadow: 10px 12px 20px #000;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.notableShulks >ul >li{
+  text-align: left;
+}
+.headerModal i{
+  color:white;
+}
+
+.headerModal span{
+  color:white;
+  font-size:14px;
+}
+
+.headerModalSmash i{
+  color:white;
+}
+
+.headerModalSmash span{
+  color:white;
+  font-size:14px;
+}
+
+.information_aboutMe{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  font-size: 15px;
+  height: 100%;
+  padding:3%;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.content_aboutMe{
+  text-align: justify;
+  font-size: :12px;
+}
+
+.content_modalBanner{
+  text-align: justify;
+  font-size: :15px;
+  margin-top:15px;
+  margin-bottom:15px;
+
+}
+
+.aboutMe_title{
+  font-size:40px;
+  font-family: 'Crete Round', serif;
+  /*color: rgb(31, 97, 141);*/
+  color: rgb(36, 113, 163);
+
+  )
+}
+
+.information_aboutFuerzaDON{
+  background-color: rgba(248, 248, 248, 1);
+  box-shadow: 10px 12px 20px #000;
+  border-radius: 15px;
+  font-size: 15px;
+  height: 100%;
+  padding:3%;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-left: 30px;
+  padding-right:30px;
+}
+
+
+.messageTab{
+  color: white;
+  font-size:20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+
+}
+
+.content_aboutFuerzaDON{
+  text-align: justify;
+  font-size: :12px;
+}
+
+.aboutFuerzaDON_title{
+  font-size:40px;
+  font-family: 'Crete Round', serif;
+  /*color: rgb(31, 97, 141);*/
+  color: rgb(36, 113, 163);
+}
+
+.smashTab{
+  background-image: url(img/FuerzaDON/wood10.jpeg);
+}
+
+.skillTabs{
+  background-color: rgba(158, 202, 227, 1) !important;
 }
 
 .cssload-battery {
@@ -747,10 +917,10 @@ Image credits: unsplash.com
 /********************************/
 .fade-carousel {
     position: relative;
-    height: 100vh;
+    /*height: 50vh;*/
 }
 .fade-carousel .carousel-inner .item {
-    height: 100vh;
+    /*height: 50vh;*/
 }
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
@@ -863,6 +1033,12 @@ Image credits: unsplash.com
   background-image: url(img/photo-03.jpg);
 }
 
+.textbackground{
+  opacity: 0.5;
+  background: rgb(0,0,0);
+
+}
+
 /********************************/
 /*          Media Queries       */
 /********************************/
@@ -936,7 +1112,7 @@ Image credits: unsplash.com
 }
 
 .sticky2 {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
   top: 0px;
 }
@@ -944,15 +1120,14 @@ Image credits: unsplash.com
 /*picture header*/
 
 
-.imageHeader{
+.blackOpacity_bg{
   background-color: rgba(0,0,0,0.4);
-  position: relative;
 }
 
-.containerHeader > .imageHeader div{
+header .blackOpacity_bg div{
   color:rgba(255, 255, 255, 1);
   font-family: 'Istok Web', sans-serif;
-  margin: auto;
+  margin: 0 auto;
   position: absolute;
   width: 100%;
 }
@@ -973,23 +1148,63 @@ Image credits: unsplash.com
 }
 
 
+/* Movile design parallax image*/
+.responsiveMessage .image .messageCenter{
+  color:white;
+  font-size: 40px;
+  font-family: 'Courgette', cursive;
+}
+
+.messageCenter{
+  padding-top:150px;
+  padding-bottom:150px;
+}
+
+.imageContainer{
+  padding: 30px;
+  width: 100%;
+}
+
+.imageCenter{
+  margin: 0 auto;
+
+}
+
+.imageMonadoArt{
+  position: absolute;
+  margin: 0 auto;
+  top:-35px;
+  margin-left:auto;
+  margin-right:auto;
+  left:0;
+  right:0;
+}
 /*--------------------------------------------------------*/
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575px) {
   .welcome{
-      font-size:30px;
-      top: 150px;
+      font-size:42px;
+      top: 160px;
+      font-weight: bold;
+      -webkit-text-fill-color: #fff;
+      -webkit-text-stroke: 1px #000000;
   }
 
   .this_is{
-    font-size:18px;
-    top: 250px;
+    font-size:30px;
+    top: 300px;
+    font-weight: bold;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
   }
 
   .website_contruction{
-    font-size:15px;
-    top: 320px;
+    font-size:24px;
+    top: 460px;
+    font-weight: bold;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
   }
 
   .inputMargin{
@@ -997,26 +1212,98 @@ Image credits: unsplash.com
       margin-right: 10px;
   }
 
-  .picture_aboutMe{
+  .messageCenter{
+    font-weight: bold;
+    padding-top:100px;
+    padding-bottom:100px;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
+  }
+
+  .aboutFuerzaDON_title{
+    font-size:25px;
+    font-family: 'Crete Round', serif;
+    /*color: rgb(31, 97, 141);*/
+    color: rgb(36, 113, 163);
+  }
+
+  .titleSmash{
+    font-size:35px;
+    -webkit-text-stroke: 1.5px #000000;
+  }
+
+  .formatTabs{
+    color:black;
+    background: white;
   }
 
 }
 
+
+/* Customize NAV-TABS*/
+
+.nav>li>a {
+    background-color: #c0392b  !important;
+    color: #fff;
+}
+
+
+.nav-tabs > li > a:hover{
+    background-color:  #7d3c98     !important;
+    border: medium none;
+    border-radius: 0;
+    color: #fff   ;
+}
+
+.nav-tabs > li.active > a {
+  color: #fff;
+  background-color: #7d3c98  !important;
+  font-size: 15px;
+}
+
+.nav-tabs > li.active > a:hover {
+  color: #fff !important;
+}
+
+.nav-tabs > li.active > a:focus {
+  background-color:   #a569bd  !important;
+  color: #fff;
+}
+
+/* END CUSTOMIZE NAV-TABS*/
+
 /* Small devices (landscape phones, less than 768px)*/
 @media (min-width: 576px) and (max-width: 767px) {
   .welcome{
-      font-size:45px;
-      top: 245px;
+      font-size:52px;
+      top: 200px;
+      font-weight: bold;
+      -webkit-text-fill-color: #fff;
+      -webkit-text-stroke: 1px #000000;
   }
 
   .this_is{
-    font-size:25px;
-    top: 345px;
+    font-size:32px;
+    top: 360px;
+    font-weight: bold;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
   }
 
   .website_contruction{
-    font-size:20px;
-    top: 415px;
+    font-size:26px;
+    font-weight: bold;
+    top: 490px;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
+  }
+
+  .messageCenter{
+    font-weight: bold;
+    padding-top:80px;
+    padding-bottom:80px;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000000;
   }
 
 
@@ -1388,7 +1675,7 @@ scroll {  0% {
 }
 
 .getit_section{
-    margin-top: 40px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -1613,7 +1900,7 @@ scroll {  0% {
 
 /*============== Blog style ==============*/
 
-.blog_area{
+.experience_area{
   margin-top: 40px;
   margin-bottom: 40px;
 }
