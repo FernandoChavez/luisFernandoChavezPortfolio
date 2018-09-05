@@ -23,9 +23,29 @@ a:hover{
 }
 
 
+
 footer{
-  background-color: black;
-  height: 400px;
+
+  background-image: url(img/footer/footer2.jpeg);
+  background-position: 40% 50%;
+  /*filter:brightness(0.4);*/
+}
+.titleFooter{
+  color:rgba(255, 255, 255, 1);
+  font-size: 18px;
+}
+.footerLayer{
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom:40px;
+}
+
+
+.services_area{
+  background-color: rgb(255, 255, 255);
+  padding-top:40px;
 }
 
 /*============== Preloader ==============*/
@@ -89,6 +109,10 @@ footer{
   background-color: rgb(211, 123, 161);
 }
 
+.headerModalPortfolio{
+  background-color: rgb(51, 102, 0)
+}
+
 .messageLoge{
   position: absolute;
   margin: 0 auto;
@@ -101,7 +125,7 @@ footer{
 }
 
 .contactBackground{
-  background-color: rgba(245,245,245, 1);
+  background-color: rgba(235,235,235, 1);
 
 }
 div > div > div> .titleSmash{
@@ -114,6 +138,21 @@ div > div > div> .titleSmash{
 .titleSmash{
   font-size:60px;
   -webkit-text-stroke: 2px #000000;
+}
+
+.cardPicture{
+  width: 65%;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 25px 13px #000;
+  transition: all 0.5s ease 0s;
+  cursor:  pointer;
+}
+
+.cardPicture:hover{
+    width: 70%;
 }
 
 .picture_aboutMe{
@@ -144,30 +183,58 @@ div > div > div> .titleSmash{
   position: relative;
   width: 100%;
   padding-top: 100%;
-  box-shadow: 10px 12px 20px #000;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  box-shadow: 10px 12px 6px #000;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
 }
 
-.picture_aboutShulk{
-  background-image: url(img/FuerzaDON/normalShulk.png);
-  background-position: 40% 15%;
+
+.circle-div {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circle-div img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+div > div> div> .picture_aboutShulk{
+  background-image: url(img/FuerzaDON/shulk3.jpg);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   height: auto;
   position: relative;
   width: 100%;
   padding-top: 100%;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  -webkit-transition: width 6s; /* Safari */
-  transition: width 6s;
+  box-shadow: 10px 12px 6px #000;
+  margin-top: 80px;
+  margin-bottom: 70px;
+
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+
 
 }
 
+div > div > div > .picture_aboutShulk:hover{
+  background-image: url(img/FuerzaDON/shulk4.jpg);
 
-.picture_aboutShulk:hover{
-  background-image: url(img/FuerzaDON/meliaShulk.png);
 }
+
+.picture_aboutShulk{
+  background-position: 50% 50%;
+}
+
 
 
 .carousel-shadow{
@@ -178,9 +245,7 @@ div > div > div> .titleSmash{
   font-weight: bold;
 }
 
-.notableShulks >ul >li{
-  text-align: left;
-}
+
 .headerModal i{
   color:white;
 }
@@ -199,6 +264,21 @@ div > div > div> .titleSmash{
   font-size:14px;
 }
 
+.headerModalPortfolio i{
+  color:white;
+}
+
+.headerModalPortfolio span{
+  color:white;
+  font-size:14px;
+}
+
+.rectangular-picture{
+  width: 100%;
+  height: auto;
+  box-shadow: 15px 17px 25px #000;
+}
+
 .information_aboutMe{
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
@@ -210,6 +290,15 @@ div > div > div> .titleSmash{
   margin-bottom: 100px;
   margin-left: 3%;
   margin-right: 3%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.information_project{
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding:3%;
+  width: 100%;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -232,8 +321,13 @@ div > div > div> .titleSmash{
   font-family: 'Crete Round', serif;
   /*color: rgb(31, 97, 141);*/
   color: rgb(36, 113, 163);
+}
 
-  )
+.titleDiv{
+  font-size:38px;
+  font-family: 'Patua One', cursive;
+  /*color: rgb(31, 97, 141);*/
+  color: rgb(36, 113, 163);
 }
 
 .information_aboutFuerzaDON{
@@ -278,7 +372,7 @@ div > div > div> .titleSmash{
 }
 
 .skillTabs{
-  background-color: rgba(158, 202, 227, 1) !important;
+  background-color: rgba(  33, 47, 61  , 1) !important;
 }
 
 .cssload-battery {
@@ -1133,18 +1227,24 @@ header .blackOpacity_bg div{
 }
 
 .welcome{
-    font-size:60px;
+    font-size:90px;
     top: 230px;
+    text-align: left !important;
+    padding-left:100px;
 }
 
 .this_is{
-  font-size:30px;
-  top: 350px;
+  font-size:50px;
+  top: 410px;
+  text-align: left !important;
+  padding-left:100px;
 }
 
 .website_contruction{
-  font-size:25px;
-  top: 445px;
+  font-size:40px;
+  top: 550px;
+  text-align: left !important;
+  padding-left:100px;
 }
 
 
@@ -1167,7 +1267,9 @@ header .blackOpacity_bg div{
 
 .imageCenter{
   margin: 0 auto;
-
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
 }
 
 .imageMonadoArt{
@@ -1186,14 +1288,25 @@ header .blackOpacity_bg div{
   .welcome{
       font-size:42px;
       top: 160px;
+      text-align: left !important;
+      padding-left:50px;
       font-weight: bold;
       -webkit-text-fill-color: #fff;
       -webkit-text-stroke: 1px #000000;
   }
 
+  .titleDiv{
+    font-size:20px;
+    font-family: 'Patua One', cursive;
+    /*color: rgb(31, 97, 141);*/
+    color: rgb(36, 113, 163);
+  }
+
   .this_is{
     font-size:30px;
-    top: 300px;
+    top: 340px;
+    text-align: left !important;
+    padding-left:50px;
     font-weight: bold;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px #000000;
@@ -1201,10 +1314,13 @@ header .blackOpacity_bg div{
 
   .website_contruction{
     font-size:24px;
-    top: 460px;
+    top: 480px;
     font-weight: bold;
+    text-align: left !important;
+    padding-left:50px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px #000000;
+
   }
 
   .inputMargin{
@@ -1237,35 +1353,70 @@ header .blackOpacity_bg div{
     background: white;
   }
 
+  .picture_aboutShulk{
+    background-position: 52% 32%;
+  }
+
 }
 
 
 /* Customize NAV-TABS*/
 
-.nav>li>a {
+.smash>.nav>li>a {
     background-color: #c0392b  !important;
     color: #fff;
 }
 
 
-.nav-tabs > li > a:hover{
+.smash>.nav-tabs > li > a:hover{
     background-color:  #7d3c98     !important;
     border: medium none;
     border-radius: 0;
     color: #fff   ;
 }
 
-.nav-tabs > li.active > a {
+.smash>.nav-tabs > li.active > a {
   color: #fff;
   background-color: #7d3c98  !important;
   font-size: 15px;
 }
 
-.nav-tabs > li.active > a:hover {
+.smash>.nav-tabs > li.active > a:hover {
   color: #fff !important;
 }
 
-.nav-tabs > li.active > a:focus {
+.smash>.nav-tabs > li.active > a:focus {
+  background-color:   #a569bd  !important;
+  color: #fff;
+}
+
+/*TABS SKILLS FORMAT*/
+.skills>.nav>li>a {
+    background-color: rgb(4,4,4)  !important;
+    color: rgb(77,207,0);
+}
+
+
+.skills>.nav-tabs > li > a:hover{
+    background-color:  rgb(4,4,4)    !important;
+    border: medium none;
+    border-radius: 0;
+    color: rgb(255,255,255);
+}
+
+.skills>.nav-tabs > li.active > a {
+  background-color:   rgb(33, 47, 61)  !important;
+  color: rgb(255,255,255) !important;
+  /*color: rgb(111, 171, 221);*/
+  font-size: 15px;
+}
+
+.skills>.nav-tabs > li.active > a:hover {
+
+  color: rgb(255,255,255) !important;
+}
+
+.skills.nav-tabs > li.active > a:focus {
   background-color:   #a569bd  !important;
   color: #fff;
 }
@@ -1282,28 +1433,46 @@ header .blackOpacity_bg div{
       -webkit-text-stroke: 1px #000000;
   }
 
+  .titleDiv{
+    font-size:28px;
+    font-family: 'Patua One', cursive;
+    /*color: rgb(31, 97, 141);*/
+    color: rgb(36, 113, 163);
+  }
+
   .this_is{
-    font-size:32px;
+    font-size:38px;
     top: 360px;
     font-weight: bold;
+    text-align: left !important;
+    padding-left:100px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px #000000;
   }
 
   .website_contruction{
-    font-size:26px;
+    font-size:32px;
     font-weight: bold;
     top: 490px;
+    text-align: left !important;
+    padding-left:100px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px #000000;
   }
 
   .messageCenter{
+    font-size:28px;
     font-weight: bold;
     padding-top:80px;
     padding-bottom:80px;
+    text-align: left !important;
+    padding-left:100px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px #000000;
+  }
+
+  .picture_aboutShulk{
+    background-position: 52% 32%;
   }
 
 
@@ -1530,7 +1699,7 @@ scroll {  0% {
 /*============== Service style ==============*/
 
 .single_service{
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 100px;
 }
 .single_service i{
@@ -1546,9 +1715,11 @@ scroll {  0% {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   font-size: 30px;
-  color: #f32b1a;
+  /*color: #f32b1a;*/
+  color: rgb(240, 240, 240);
   line-height: 76px;
-  background: rgba(195, 185, 185, 0.21);
+  /*background: rgba(195, 185, 185, 0.21);*/
+  background: #c0392b;
   width: 80px;
   height: 80px;
   text-align: center;
@@ -1558,7 +1729,8 @@ scroll {  0% {
 
   .single_service:hover .ico{
   color:#F3F1F1;
-  background: #f32b1a;
+  /*background: #f32b1a;*/
+  background-color: rgb(153, 0, 153);
   cursor:pointer;
   -webkit-transition:  ease-out .5s;
   -moz-transition:  ease-out .5s;
@@ -1568,7 +1740,8 @@ scroll {  0% {
 
   .single_service .ico:hover{
   color:#F3F1F1;
-  background: #f32b1a;
+  /*background: #f32b1a;*/
+  background-color: rgb(153, 0, 153);
   cursor:pointer;
   -webkit-transition:  ease-out .5s;
   -moz-transition:  ease-out .5s;
@@ -1576,6 +1749,26 @@ scroll {  0% {
   transition: ease-out .5s;
   }
 
+.divTab{
+  background-color: rgba(229, 229, 229, 1);
+  border-radius: 15px;
+  font-size: 15px;
+  height: 100%;
+  padding-left:10%;
+  padding-right:10%;
+  padding-top:3%;
+  padding-bottom:3%;
+  width: 100%;
+}
+
+.skillTitle{
+  text-transform: uppercase;
+  color: rgba( 77,207,0 ,1);
+  font-size: 43px;
+  font-weight: bold;
+  margin-top:40px;
+  margin-bottom:40px;
+}
 
 .single_service .ico i{
   -webkit-transform: rotate(-45deg);
@@ -1686,8 +1879,9 @@ scroll {  0% {
 /* ===========Portfolio style===========*/
 
 .portfolio_area{
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(243, 243, 243);
 }
 
 .portfolio_section{
@@ -1700,6 +1894,12 @@ scroll {  0% {
   font-weight: 600;
 }
 
+.titleArea{
+  color: #3498db;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
 .portfolio_top{
 
 }
@@ -1800,7 +2000,7 @@ scroll {  0% {
   }
 
     .portfolio .label-bg {
-      background: #e95a44;
+      background-color: rgb(51, 102, 0);
       width: 100%;
       height:100%;
       position: absolute;
@@ -1809,7 +2009,7 @@ scroll {  0% {
     }
 
     .portfolio .label-text {
-      color:#fff;
+      color:#ffffff;
       position: relative;
       z-index:500;
       padding:5px 8px;
@@ -1878,13 +2078,7 @@ scroll {  0% {
   margin-bottom: 60px;
   }
 
-.skill_section h2{
-  text-transform: uppercase;
-}
 
-.skill_section h2 span{
-  color: #3498db;
-}
 
 .progress .progress-bar.six-sec-ease-in-out {
     -webkit-transition: width 6s ease-in-out;
@@ -1901,8 +2095,13 @@ scroll {  0% {
 /*============== Blog style ==============*/
 
 .experience_area{
-  margin-top: 40px;
+  padding-top: 40px;
   margin-bottom: 40px;
+  padding-bottom:40px;
+}
+
+.skills_area{
+  padding-bottom: 80px;
 }
 
 .blog_section{
@@ -1932,13 +2131,7 @@ color: #282a2e;
 }
 
 
-.dates{
 
-}
-
-.expect{
-
-}
 
 .slider-content {
   position: relative;
@@ -1973,7 +2166,54 @@ color: #282a2e;
   transition: all .5s ease-in-out;
 }
 
+.gallery-tabs{
+  position: relative;
+  margin-top:20px;
+}
 
+.gallery-tabs img{
+  width: 100%;
+  /*
+  transition: .5s ease;
+  cursor:pointer;
+  margin-top:15px;
+  */
+
+
+}
+
+.gallery-tabs:hover .middle {
+  opacity: 1;
+}
+
+.container-certificate{
+  width: 100%;
+  position: relative;
+}
+
+.middle {
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    position: absolute;
+    opacity:0;
+    color: rgb(77,207,0);
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+}
+
+.justified{
+  text-align: justify;
+}
 .slider-content:hover .slider-text {
   background:#3498db;
 }
@@ -2171,7 +2411,7 @@ line-height: 45px !important;}
     border-radius: 5px;
     font-weight: normal;
 }
-.error{
+.error1{
     background: #F44C4C;
     padding: 10px;
     margin-bottom: 10px;

@@ -1,9 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Luis Fernando Chávez Morales">
+    <meta name="Description" content="Nickname: FuerzaDON. Year: 2017. Description: Personal website in focus in my laboral experience, portfolio, knowledge and hobbies">
     <title>Porfolio | Luis Fernando Chávez Morales | FuerzaDON</title>
 
     <!--Google web fonts-->
@@ -12,19 +15,27 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <!--
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+  -->
 
     <!-- font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
+    <!-- Skillbar-->
+    <link rel="stylesheet" href="css/skillbar.css">
 
+    <!--Hover library -->
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css">
+-->
 
     <!-- Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Crete+Round|Lato|Istok+Web|Lato|Lobster|Open+Sans|Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Crete+Round|Lato|Istok+Web|Lato|Lobster|Open+Sans|Courgette|Patua+One" rel="stylesheet">
 
     <!-- Textillate -->
     <link rel="stylesheet" href="assets/animate.css">
+
 
 
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -64,6 +75,7 @@
           <li><a href=".about_me">About me</a></li>
           <li><a href=".experience_area">Experience</a></li>
           <li><a href=".skills_area">Skills</a></li>
+          <li><a href=".services_area">Services</a></li>
           <li><a href=".portfolio_area">Portfolio</a></li>
           <li><a href=".smash_area">Smash</a></li>
           <li><a href="" data-toggle="modal" data-target="#contactArea">Contact me</a></li>
@@ -89,34 +101,45 @@
         <h3 class="modal-title titleContact" id="exampleModalLabel">CONTACT ME</h3>
         <i class="fa fa-mobile fa-lg" aria-hidden="true"></i><span> :  Send a message for know my phone</span><br>
         <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span> :  ingLuisFernandoChavez@hotmail.com</span><br>
-          <span>THIS SECTION DOESN'T WORKS YET</span>
-
       </div>
       <div class="modal-body">
 
-        <form>
+        <form class='emailContact'>
           <div class="form-group inputMargin">
             <label for="name" class="justifyText">Enter your Name:*</label>
-            <input type="text" class="form-control" id="nameUser" name="nameUser" aria-describedby="namelHelp" placeholder="Enter Name" required>
+            <input type="text" class="form-control" id="nameUser" name="nameUser" aria-describedby="namelHelp" placeholder="Enter Name"
+              data-validation='length required'
+              data-validation-length='min1'
+              data-validation-error-msg='Fill in this input with your name'>
           </div>
           <div class="form-group inputMargin">
             <label for="email" class="justifyText">Enter your Email:*</label>
-            <input type="email" class="form-control" id="emailUser" name="emailUser" aria-describedby="emailEmail" placeholder="Enter email" required>
+            <input type="email" class="form-control" id="emailUser" name="emailUser" aria-describedby="emailEmail" placeholder="Enter email"
+            data-validation='email required'
+            data-validation-error-msg='Fill in correctly your email'>
           </div>
           <div class="form-group inputMargin">
             <label for="business" class="justifyText">Business about:*</label>
             <select class="form-control" id="businessUser" name="businessUser">
-              <option>Development</option>
-              <option>Super Smash Bros</option>
+              <option value="dev">Development</option>
+              <option value="smash">Super Smash Bros</option>
             </select>
           </div>
           <div class="form-group inputMargin">
             <label for="subject" class="justifyText">Enter your Subject:*</label>
-            <input type="text" class="form-control" id="subjectUser" name="subjectUser" aria-describedby="subjectlHelp" placeholder="Enter Subject" required>
+            <input type="text" class="form-control" id="subjectUser" name="subjectUser" aria-describedby="subjectlHelp" placeholder="Enter Subject"
+            data-validation='length required'
+            data-validation-length='min1'
+            data-validation-error-msg='Subject?'>
           </div>
           <div class="form-group inputMargin">
             <label for="message" class="justifyText">Enter your message:*</label>
-            <textarea class="form-control" rows="6" id="messageUser" name="messageUser" aria-describedby="messagelHelp" placeholder="Enter your message" required></textarea>
+            <textarea class="form-control" rows="6" id="messageUser" name="messageUser" aria-describedby="messagelHelp" placeholder="Enter your message"
+            data-validation='length required'
+            data-validation-length='min1'
+            data-validation-error-msg='What is your message?'></textarea>
+
+
           </div>
           <button type="submit" class="btn btn-success">Submit</button>
           <button type="button" class="btn btn-secundary" data-dismiss="modal">Close</button>
@@ -129,10 +152,11 @@
 
 <!-- Header-->
 <header class="header">
-  <div class="image parallax-window blackOpacity_bg"  data-speed="0.3" data-parallax="scroll" data-image-src="img/header/bg7.jpeg">
-    <div class="welcome"><p data-in-effect="rollIn">WELCOME EVERYONE!!!</p></div>
-    <div class="this_is"><p>Here Fernando and I like web development and video editing</p></div>
-    <div class="website_contruction"><p>(This website is still in construction)</p></div>
+  <div class="image parallax-window blackOpacity_bg"  data-speed="0.3" data-parallax="scroll" data-image-src="img/header/bg16.jpg">
+    <div class="welcome"><p>Hello my friend!</p></div>
+    <div class="this_is"><p>Welcome to my portfolio</p></div>
+    <div class="website_contruction"><p>This is Fernando and I'm a Web Developer and a Video Editor</p></div>
+    <!--<div class="website_contruction"><p>(This website is still in construction)</p></div>-->
   </div>
 </header>
 
@@ -165,7 +189,7 @@ tourney events where are made in diferents part of Mexico and let me the opportu
           </div>
         </div>
       </div>
-      <div class="col-lg-7 col-md-7 description_ aboutMe"></div>
+      <div class="col-lg-7 col-md-7"></div>
     </div>
   </div>
 </div>
@@ -176,38 +200,74 @@ tourney events where are made in diferents part of Mexico and let me the opportu
   </div>
 </div>
 
-<div class="experience_area">
+<div class="experience_area wow bounceInRight animated">
   <div class="container">
     <div class="row">
       <div class="blog_section">
-          <h1>Experience <span>blog</span></h1>
+          <h1 class="titleArea">Laboral Experience</h1>
           <div class="single_blog col-md-4 slider-content">
             <a href="#">
-                <img src="img/1.jpg" alt="">
+                <img src="img/telecable.jpg" alt="">
                 <div class="slider-text">
-                  <h3>This is demo title</h3>
-                  <p> <i class="fa fa-user"></i> By FAHEM <i class="fa fa-clock-o"></i> August 31th, 2014</p>
-                  <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+                  <h3>Telecable Lzc</h3>
+                  <p><i class="fa fa-user"></i> Web Developer and Technical support <i class="fa fa-clock-o"></i> March - May, 2015  <i class="fa fa-map-marker"></i> LZC, Mich</p>
+                  <p class="justified">
+                     -Develop Telecable Website<br>
+                     -Technical Support in TV and Internet<br>
+                     -Videos Editing<br>
+                     -Images Editing<br>
+                     -Network Support
+                  </p>
                 </div>
             </a>
           </div>
           <div class="single_blog col-md-4 slider-content">
             <a href="#">
-                <img src="img/2.jpg" alt="">
+                <img src="img/credix.jpg" alt="">
                 <div class="slider-text">
-                  <h3>This is demo title</h3>
-                  <p> <i class="fa fa-user"></i> By FAHEM <i class="fa fa-clock-o"></i> August 31th, 2014</p>
-                  <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+                  <h3>CredixGS</h3>
+                  <p> <i class="fa fa-user"></i> Full Stack Developer Jr <i class="fa fa-clock-o"></i> October 2015 - March 2017 <i class="fa fa-map-marker"></i> Morelia, Mich</p>
+                  <p class="justified">
+                     -Java Backend Development<br>
+                     -Frontend Development<br>
+                     -Creation of Queries<br>
+                     -Testing<br>
+                     -Documentation creating<br>
+
+
+                  </p>
                 </div>
             </a>
           </div>
           <div class="single_blog col-md-4 slider-content">
             <a href="#">
-                <img src="img/3.jpg" alt="">
+                <img src="img/deintec.jpg" alt="">
                 <div class="slider-text">
-                  <h3>This is demo title</h3>
-                  <p> <i class="fa fa-user"></i> By FAHEM <i class="fa fa-clock-o"></i> August 31th, 2014</p>
-                  <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially.</p>
+                  <h3>Deintec</h3>
+                  <p> <i class="fa fa-user"></i> Java Developer / Support <i class="fa fa-clock-o"></i> MAY 2017 - JUN 2018 <i class="fa fa-map-marker"></i> Guadalajara, Jal</p>
+                  <p class="justified">
+                    -Java Support<br>
+                    -Java Develpment<br>
+                    -Documentation<br>
+                    -Technical Communication with foreign<br>
+                    -Update database´s information<br>
+                  </p>
+                </div>
+            </a>
+          </div>
+          <div class="single_blog col-md-4 slider-content">
+            <a href="#">
+                <img src="img/deintec.jpg" alt="">
+                <div class="slider-text">
+                  <h3>infortec</h3>
+                  <p> <i class="fa fa-user"></i> Java Developer / Support <i class="fa fa-clock-o"></i> Jul 2018 - Currently <i class="fa fa-map-marker"></i> Guadalajara, Jal</p>
+                  <p class="justified">
+                    -Java Support<br>
+                    -Java Develpment<br>
+                    -Documentation<br>
+                    -Technical Communication with foreign<br>
+                    -Update database´s information<br>
+                  </p>
                 </div>
             </a>
           </div>
@@ -219,38 +279,94 @@ tourney events where are made in diferents part of Mexico and let me the opportu
 
 
 
-<div class="skills_area">
+<div class="skills_area image parallax-window-min "  data-speed="0.3" data-parallax="scroll" data-image-src="img/experience.png">
   <div class="container">
-    <div class="row">
-      <h2>Knowledge and Skills</h2>
+    <div class="row skills wow bounceInLeft animated">
+      <div class="skillTitle">Knowledge and Skills</div>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#lenguages">Programming Lenguages</a></li>
-        <li><a data-toggle="tab" href="#libraries">Libraries</a></li>
+        <li class="active"><a data-toggle="tab" href="#languages">Programming Languages</a></li>
         <li><a data-toggle="tab" href="#frameworks">Frameworks</a></li>
-        <li><a data-toggle="tab" href="#software">Software</a></li>
+        <li><a data-toggle="tab" href="#dbms">DBMS</a></li>
+        <li><a data-toggle="tab" href="#webTech">Web Technologies & Tools</a></li>
         <li><a data-toggle="tab" href="#courses">Courses</a></li>
       </ul>
 
       <div class="tab-content">
-        <div id="lenguages" class="tab-pane fade in active skillTabs">
-          <h3>PROGRAMMING LENGUAGES</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div id="libraries" class="tab-pane fade skillTabs">
-          <h3>LIBRARIES</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div id="languages" class="tab-pane fade in active skillTabs">
+          <div class="divTab" id="languagesDiv">
+            <p class="titleDiv">PROGRAMMING LANGUAGES</p>
+            <button type="button" class="btn btn-success restartAnimation" >Restart Animation</button>
+            <button type="button" class="btn btn-primary finishAnimation" >Finish Animation</button>
+            <div class="barYears clearfix">
+              <div class="minYears">| 0 Years</div>
+              <div class="maxYears">3 Years |</div>
+            </div>
+          </div>
         </div>
         <div id="frameworks" class="tab-pane fade skillTabs">
-          <h3>FRAMEWORKS</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div class="divTab" id="frameworksDiv">
+            <p class="titleDiv">FRAMEWORKS</p><br>
+            <button type="button" class="btn btn-success restartAnimation" >Restart Animation</button>
+            <button type="button" class="btn btn-primary finishAnimation" >Finish Animation</button>
+            <div class="barYears clearfix">
+              <div class="minYears">| 0 Years</div>
+              <div class="maxYears">3 Years |</div>
+            </div>
+          </div>
         </div>
-        <div id="software" class="tab-pane fade skillTabs">
-          <h3>SOFTWARE</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div id="dbms" class="tab-pane fade skillTabs">
+          <div class="divTab" id="dbmsDiv">
+            <p class="titleDiv">DATABASES MANAGEMENT SYSTEMS</p><br>
+            <button type="button" class="btn btn-success restartAnimation" >Restart Animation</button>
+            <button type="button" class="btn btn-primary finishAnimation" >Finish Animation</button>
+            <div class="barYears clearfix">
+              <div class="minYears">| 0 Years</div>
+              <div class="maxYears">3 Years |</div>
+            </div>
+          </div>
+        </div>
+        <div id="webTech" class="tab-pane fade skillTabs">
+          <div class="divTab" id="webTechDiv">
+            <p class="titleDiv">WEB TECHNOLOGIES & TOOLS</p><br>
+            <button type="button" class="btn btn-success restartAnimation" >Restart Animation</button>
+            <button type="button" class="btn btn-primary finishAnimation" >Finish Animation</button>
+            <div class="barYears clearfix">
+              <div class="minYears">| 0 Years</div>
+              <div class="maxYears">3 Years |</div>
+            </div>
+          </div>
         </div>
         <div id="courses" class="tab-pane fade skillTabs">
-          <h3>COURSES</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="divTab" id="coursesDiv">
+            <p class="titleDiv">COURSES</p><br>
+              <div class="row">
+                <div class="col-md-4  gallery-tabs">
+                  <div class="container-certificate">
+                    <img src="img/deintec.jpg" alt="">
+                    <div class="middle">My name is Luis</div>
+                  </div>
+                </div>
+                <div class=" col-md-4 img-fluid  gallery-tabs">
+                  <div class="container-certificate">
+                    <img src="img/deintec.jpg" alt="">
+                    <div class="middle">John Doe</div>
+                  </div>
+                </div>
+                <div class=" col-md-4 img-fluid gallery-tabs">
+                  <div class="container-certificate">
+                    <img src="img/deintec.jpg" alt="">
+                    <div class="middle">John Doe</div>
+                  </div>
+                </div>
+                <div class=" col-md-4 img-fluid  gallery-tabs">
+                  <div class="container-certificate">
+                    <img src="img/deintec.jpg" alt="">
+                    <div class="middle">My name is John</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -258,7 +374,50 @@ tourney events where are made in diferents part of Mexico and let me the opportu
 </div>
 
 
+<div class="services_area">
+  <div class="container">
+    <div class="row">
+      <div class="service_section wow bounceInRight animated">
+          <h1 class="titleArea">Services</h1>
 
+          <div class="col-md-3">
+            <div class="single_service">
+              <div class="ico"><i class="fa fa-laptop"></i></div>
+              <h2>Web Platforms</h2>
+              <p>Web Projects with the best interface for the need of the customers. </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="single_service">
+              <div class="ico"><i class="fa fa-mobile"></i></div>
+              <h2>Responsive</h2>
+              <p>Your Web Site can be adapting to the screen of any mobile device with Android or IOS.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="single_service">
+              <div class="ico"><i class="fa fa-code"></i></div>
+              <h2>Optime Code</h2>
+              <p>Web sites are created with algorithms, frameworks and tools for make optime the code</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="single_service">
+              <div class="ico"><i class="fa fa-youtube"></i></div>
+              <h2>Video Edition</h2>
+              <p>Video edition for any kind of project</p>
+            </div>
+          </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="portfolio_area">
@@ -266,7 +425,7 @@ tourney events where are made in diferents part of Mexico and let me the opportu
       <div class="portfolio_section">
           <div class="col-md-12 portfolio_top">
               <h1>Portfolio</h1>
-              <p>Theses are somes of my projects</p>
+              <p>These are some of the projects I have worked on</p>
           </div>
       </div>
 
@@ -277,332 +436,122 @@ tourney events where are made in diferents part of Mexico and let me the opportu
       <li><span class="filter" data-filter="web">Web</span></li>
     </ul>
 
+    <!--List Project Portfolio -->
     <div id="portfoliolist">
-
-      <div class="portfolio web" data-cat="web">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/web/rockwell.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Rockwell</a>
-              <span class="text-category">Web Support</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/herovsemperor.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Hero vs Emperor</a>
-              <span class="text-category">AMV</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/LOTMAIV.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Lord of the Moando Arts IV</a>
-              <span class="text-category">Combo/Highlight Video</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio web" data-cat="web">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/web/hestiags.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">HestiaGS</a>
-              <span class="text-category">Web Platform</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/LOTMAIII.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Lord of the Monado Arts III</a>
-              <span class="text-category">Combo/Highlight video</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio logos" data-cat="logos">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/logo/FuerzaDONLoge.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">FuerzaDON logo</a>
-              <span class="text-category">Logo</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio web" data-cat="web">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/web/demeter.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">DemeterGS</a>
-              <span class="text-category">Web Plarform</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/LOTMAII.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Lord of the Monado Arts II</a>
-              <span class="text-category">Combo/Highlight video</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="portfolio web" data-cat="web">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/web/telecable.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Telecable Site</a>
-              <span class="text-category">Web Site</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/LOTMA.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Lord of the Monado Arts</a>
-              <span class="text-category">Combo/Highlight video</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/OKY.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">OKY</a>
-              <span class="text-category">Tutorial Video</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/trustinme.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Trust in my, my brother</a>
-              <span class="text-category">Amv</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/darkangels.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Dark Angels</a>
-              <span class="text-category">Amv</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio video" data-cat="video">
-        <div class="portfolio-wrapper box_portfolio">
-          <img src="img/portfolios/video/gottabesomebody.jpg" alt="" />
-          <div class="label">
-            <div class="label-text">
-              <a class="text-title">Gotta Be Somebody</a>
-              <span class="text-category">Amv</span>
-            </div>
-            <div class="label-bg"></div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
   </div>
-</div><!-- portfolio area end   -->
+</div>
+
+<!-- PORTFOLIO MODALS-->
+<div id="portfolioModals">
+
+</div>
+<!-- portfolio area end   -->
 
 
-<div class="smash_area image parallax-window-smash data-speed="0.1" data-parallax="scroll" data-image-src="img/FuerzaDON/xb-bg.jpg" ">
+<div class="smash_area image parallax-window-smash" data-speed="0.1" data-parallax="scroll" data-image-src="img/FuerzaDON/xb-bg.jpg" >
   <div class="container">
-    <div class="row wow bounceInRight animated">
+    <div class="row wow bounceInLeft animated smash">
       <h2 class="titleSmash">SUPER SMASH BROS</h2><br><br>
       <ul class="nav nav-tabs">
         <li class="active "><a data-toggle="tab"  href="#aboutFuerzaDON">About FuerzaDON</a></li>
-        <li class=""><a data-toggle="tab" href="#characters">Characters</a></li>
-        <li class=""><a data-toggle="tab" href="#banners">Images and Draws</a></li>
-        <li class=""><a data-toggle="tab" href="#medias">Medias</a></li>
-        <li class=""><a data-toggle="tab" href="#donate">Donate</a></li>
-        <li class=""><a data-toggle="tab" href="#socialMedias">Social medias</a></li>
+        <li class="tab1"><a data-toggle="tab" href="#characters">Characters</a></li>
+        <li class="tab1"><a data-toggle="tab" href="#banners">Images and Draws</a></li>
+        <li class="tab1"><a data-toggle="tab" href="#notablePlayers">Notables Shulks</a></li>
+        <li class="tab1"><a data-toggle="tab" href="#donate">Donate</a></li>
+        <li class="tab1"><a data-toggle="tab" href="#socialMedias">Social medias</a></li>
       </ul>
 
       <div class="tab-content formatTabs" data-spy="scroll">
           <div id="aboutFuerzaDON" class="tab-pane fade in active smashTab">
 
             <div class="row">
-              <div class="col-xl-3 col-lg-3"></div>
-              <div class="col-xl-6 col-lg-6 col-md-12">
-                 <div class="picture_aboutFuerzaDON">
-                 </div>
-              </div>
-            </div>
+              <div class="col-xl-5 col-lg-5">
+                  <br><br><br><br>
+                  <img class="img-fluid img-thumbnail rectangular-picture" src="img/FuerzaDON/fuerzadon.jpg" alt="FuerzaDON">
+                  <br><br><br>
+                  <img class="img-fluid img-thumbnail rectangular-picture" src="img/FuerzaDON/fuerzadon4.jpg" alt="FuerzaDON">
 
-            <div class="row">
-              <div class="col-xl-1 col-lg-1"></div>
-              <div class="col-xl-10 col-lg-10 col-md-12">
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-12">
                 <div class="information_aboutFuerzaDON">
                   <p class="aboutFuerzaDON_title">About FuerzaDON</p><br>
                   <p class="content_aboutFuerzaDON">
-                    FuerzaDON is a competitive Super Smash Bros player WiiU from Mexico. He currently is active in several regionals and nationals tournaments, getting good places <br><br>
-                    He favorite and main character is Shulk, Character from Xenoblade Chronicles game and he is considerated the best Shulk of México, being the Shulk with betters places in tournaments. <br><br>
+
+
+                    FuerzaDON Nickname was created, since beginning, like a sign of the Luis Fernando´s homeworks and personal projects, and currently is a competitive Super Smash Bros player WiiU from Mexico. He currently is active in several regionals and nationals tournaments, getting good places <br><br>
+                    His favorite and main character is Shulk, Character from Xenoblade Chronicles game and he is considerated the best Shulk of México, being the Shulk with betters places in tournaments. <br><br>
 
                     FuerzaDON's playstyle is notable by his heavy use of Shulk's air time while in Jump and Speed, along with being one of the first Shulk players in the world to dominate the competitive scene with the Monado Art Landing Lag Cancel, using it to enhance his spacing game and to escape potential punishes. <br><br>
                     "Fuerza" means "Force" in Spanish, and DON are the initials of his 3 favorite anime franchises: Dragon Ball, One piece, Naruto. It's also based on the videogame for Gamecube/PS2: "Battle Stadium D.O.N".<br><br>
 
-                    For more information, click <a href="https://www.ssbwiki.com/Smasher:FuerzaDON" target="_blank">here</a>
+                    More about FuerzaDON, click <a href="https://www.ssbwiki.com/Smasher:FuerzaDON" target="_blank">here</a>
                   <p>
                 </div>
               </div>
             </div>
-
-
           </div>
         <div id="characters" class="tab-pane fade smashTab">
           <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-0"></div>
-            <div class="col-xl-6 col-lg-6 col-md-11">
-               <div class="picture_aboutShulk">
-               </div>
+            <div class="col-xl-5 col-lg-5">
+                <div class="picture_aboutShulk">
+
+                </div><br>
+
+                <img class="img-fluid img-thumbnail rectangular-picture" src="img/FuerzaDON/shulk-victory.gif" alt="Shulk Victory">
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-1 col-lg-1 col-md-0"></div>
-            <div class="col-xl-10 col-lg-10 col-md-11">
+            <div class="col-xl-7 col-lg-7 col-md-12">
               <div class="information_aboutFuerzaDON">
-                <p class="aboutFuerzaDON_title">About Shulk in Smash</p><br>
+                <p class="aboutFuerzaDON_title">About Shulk</p><br>
                 <p class="content_aboutFuerzaDON">
                   Shulk is a playable character in Super Smash Bros. 4. Shulk is a heavyweight, being the third heaviest swordsman in the game. However, his attributes are somewhat atypical for his weight class: his walking speed, falling speed and gravity are average, his dashing speed is slightly below-average, his air speed is above-average, and his air acceleration is below-average. Thanks to these attributes, Shulk has relatively good mobility for a heavyweight, especially in the air, although they do not grant him too many obvious advantages or disadvantages.  <br><br>
 
-                  Shulk is considerated, the most hard character to dominate, together Ryu and Peach, for his complicate playstyle based in Monado Arts, attribute from Monado blade. Each Monado Art improvement a Shulk´s feature but decrease anothers.<br><br>
+                  Shulk is considered, hardest character to dominate, + with Ryu and Peach, for his complicate playstyle based in Monado Arts, attribute from Monado blade. Each Monado Art mproves one of Shulk's features but decrease anothers.<br><br>
 
                   Overall, Shulk's optimal playstyle consists of warding off pressure and having extensive knowledge of his opponent. While his weaknesses are exploitable when fighting head-on, his adaptability allows him to excel when played patiently and while exploiting openings. <br><br>
 
-                  <span class="bold">Active Notable players:</span>
-                  <div class="notableShulks">
-                  <ul>
-                    <li>Nicko</li>
-                    <li>Kome</li>
-                    <li>Darkwolf</li>
-                    <li>M</li>
-                    <li>FuerzaDON</li>
-                    <li>GetShulked</li>
-                    <li>TremendoDude</li>
-                  </ul>
-                </div>
-                  <br><br>
-                  For more information, click <a href="https://www.ssbwiki.com/Shulk_(SSB4)" target="_blank">here</a>
+                  Currently Shulk was comfirmed in "Super Smash Bros Ultimate", the fifth game of the serie, in Nintendo Switch. <br><br>
+                  More about Shulk in SSB4, click <a href="https://www.ssbwiki.com/Shulk_(SSB4)" target="_blank">here</a>
                 <p>
               </div>
             </div>
           </div>
         </div>
         <div id="banners" class="tab-pane fade smashTab">
-          <span class="messageTab">Click over any image for see details</span><br><br>
+          <span class="messageTab">Click over any image to see more details</span><br><br>
           <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="8000" id="bs-carousel">
 
 
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#bs-carousel" data-slide-to="1"></li>
-              <li data-target="#bs-carousel" data-slide-to="2"></li>
-              <li data-target="#bs-carousel" data-slide-to="3"></li>
+            <ol id="indicatorFDONPictures" class="carousel-indicators">
+
             </ol>
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner carousel-shadow">
-              <div class="item slides active">
-                <a href="#" data-toggle="modal" data-target="#banner1"><img class="img-fluid" src="img/FuerzaDON/banner.jpg" alt="picture of a header"></a>
-              </div>
+            <!-- BANNERS PICUTURES FUERZADON-->
+            <div id="bannerFuerzaDONPictures" class="carousel-inner carousel-shadow">
 
-              <div class="item slides">
-                <a href="#" data-toggle="modal" data-target="#banner2"><img class="img-fluid" src="img/FuerzaDON/logoDON3.jpg" alt="picture of a header"></a>
-              </div>
-
-              <div class="item slides">
-                <a href="#" data-toggle="modal" data-target="#banner3"><img class="img-fluid" src="img/FuerzaDON/bannerTrio.jpg" alt="picture of a header"></a>
-
-              </div>
-              <div class="item slides">
-                <a href="#" data-toggle="modal" data-target="#banner4"><img class="img-fluid" src="img/FuerzaDON/bannerLoge1.jpg" alt="picture of a header"></a>
-
-              </div>
             </div>
+
           </div>
         </div>
-        <div id="medias" class="tab-pane fade">
-          <h3>MEDIAS</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div id="notablePlayers" class="tab-pane fade smashTab">
+          <span class="messageTab">The next banners were made by: Paradigm and Erico9001</span><br><br><br>
+          <div class="row" id="notableShulks">
+
+
+
+
+          </div>
         </div>
-        <div id="results" class="tab-pane fade">
-          <h3>RESULTS</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        </div>
-        <div id="donate" class="tab-pane fade">
+
+        <div id="donate" class="tab-pane fade smashTab">
           <h3>DONATE</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
-        <div id="socialMedias" class="tab-pane fade">
+        <div id="socialMedias" class="tab-pane fade smashTab">
           <h3>SOCIAL MEDIAS</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
@@ -611,107 +560,37 @@ tourney events where are made in diferents part of Mexico and let me the opportu
   </div>
 </div>
 
+
+<!-- Modals Notable Shulk banners-->
+
+<div id="bannersNotablesShulks">
+
+</div>
+
+
+
 <!--Modal Banner 1-->
-
-
-
-<div class="modal fade" id="banner1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content contactBackground">
-      <div class="modal-header headerModalSmash">
-        <div class="imageMonadoArt"><img src="img/logos/jumpLoge.png" width="100" height="100" class="d-inline-block align-top" alt=""></div>
-        <h3 class="modal-title titleModalSmash" id="exampleModalLabel">GRECIA HERRERA</h3>
-        <i class="fa fa-user fa-lg" aria-hidden="true"></i><span> :  Soulflee</span><br>
-        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i><span> :  @gtgSoulflee</span><br>
-        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span> :  gtgsoulflee@gmail.com</span>
-      </div>
-      <div class="modal-body imageContainer">
-
-        <div class=""><img class="img-responsive imageCenter" src="img/FuerzaDON/banner.jpg" alt="picture of a header"></div>
-        <!--
-        <div class="content_modalBanner">
-         This is the first and still active banner than represent to FuerzaDON.
-       </div>
-     -->
-       <br>
-       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+<div id="modalsBanners">
 </div>
-
-<div class="modal fade" id="banner2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content contactBackground">
-      <div class="modal-header headerModalSmash">
-        <div class="imageMonadoArt"><img src="img/logos/speedLoge.png" width="100" height="100" class="d-inline-block align-top" alt=""></div>
-          <h3 class="modal-title titleModalSmash" id="exampleModalLabel">GRECIA HERRERA</h3>
-          <i class="fa fa-user fa-lg" aria-hidden="true"></i><span> :  Soulflee</span><br>
-          <i class="fa fa-twitter fa-lg" aria-hidden="true"></i><span> :  @gtgSoulflee</span><br>
-          <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span> :  gtgsoulflee@gmail.com</span>
-      </div>
-      <div class="modal-body imageContainer">
-        <div class=""><img class="img-responsive imageCenter" src="img/FuerzaDON/profile2.jpg" alt="picture of a header"></div>
-        <br>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="banner3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content contactBackground">
-      <div class="modal-header headerModalSmash">
-        <div class="imageMonadoArt"><img src="img/logos/shieldLoge.png" width="100" height="100" class="d-inline-block align-top" alt=""></div>
-        <h3 class="modal-title titleModalSmash" id="exampleModalLabel">AUTOR</h3>
-        <i class="fa fa-user fa-lg" aria-hidden="true"></i><span> :  USER</span><br>
-        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i><span> :  @TWITTER</span><br>
-        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span> :  EMAIL@BUSINESS.COM</span>
-      </div>
-      <div class="modal-body imageContainer">
-        <div><img class="img-responsive imageCenter" src="img/FuerzaDON/trio.jpg" alt="picture of a header"></div>
-        <!--
-        <div class="content_modalBanner">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ea blanditiis tenetur explicabo earum harum autem, qui distinctio inventore labore pariatur, repellendus alias, ipsum molestias. Nesciunt nihil iure accusamus culpa fugit, explicabo deleniti nisi, ipsum commodi quas, voluptatem possimus minima itaque voluptates cum. Harum vitae iste numquam maiores, sapiente doloribus ipsum. Nobis cum recusandae veniam atque, quisquam, dicta provident quod.
-        </div>
-      -->
-        <br>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="banner4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content contactBackground">
-      <div class="modal-header headerModalSmash">
-        <div class="imageMonadoArt"><img src="img/logos/busterLoge.png" width="100" height="100" class="d-inline-block align-top" alt=""></div>
-        <h3 class="modal-title titleModalSmash" id="exampleModalLabel">LUIS FERNANDO CHÁVEZ MORALES</h3>
-        <i class="fa fa-user fa-lg" aria-hidden="true"></i><span> :  FuerzaDON</span><br>
-        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i><span> :  @TheFuerzaDON</span><br>
-        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span> :  FuerzaDON@hotmail.com</span>
-      </div>
-      <div class="modal-body imageContainer">
-        <div><img class="img-responsive imageCenter" src="img/FuerzaDON/logoProfile.png" alt="picture of a header"></div>
-        <br>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <footer>
-  <div class="container">
+  <div class="container footerLayer">
     <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-5">
+        <span class="titleFooter">Title 1</span><br>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-5">
+        <span class="titleFooter">Title 2</span>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-5">
+        <span class="titleFooter">Title 3</span>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-5">
+        <span class="titleFooter">Title 4</span>
+      </div>
     </div>
   </div>
 </footer>
-
-
-
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -730,24 +609,28 @@ tourney events where are made in diferents part of Mexico and let me the opportu
     <script src="js/imagesloaded.pkgd.min.js"></script>
 
 
+    <!-- ScrollReveal-->
+    <script src="js/scrollreveal.js"></script>
+
+    <!-- JQuery Validator-->
+    <script src="js/jquery.form-validator.js"></script>
+
 
    <script src="js/owl.carousel.js"></script>
 
-
    <script src="js/scrollupto.js"></script>
    <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/objects.js"></script>
    <script src="js/parallax.min.js"></script>
+
+    <script src="js/wow.js"></script>
+
+    <!-- Skillbar -->
+    <script type="text/javascript" src="js/skillbar.js"></script>
 
    <!-- Textillate -->
    <script src="js/jquery.textillate.js"></script>
    <script src="assets/jquery.lettering.js"></script>
    <script src="assets/jquery.fittext.js"></script>
-   <script src="js/myAnimations.js"></script>
-
-
-   <!-- ScrollReveal-->
-   <script src="js/scrollreveal.js"></script>
-   <script src="js/scrollrevealAnimations.js"></script>
-
 </body>
 </html>

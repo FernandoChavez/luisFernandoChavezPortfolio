@@ -5,9 +5,9 @@
         $('body').delay(350).css({'overflow':'visible'});
 
         //My textillate animations
-        $('.welcome').textillate({ initialDelay: 400, in: { effect: 'fadeInLeft', delayScale: 0.4} });
-        $('.this_is').textillate({ initialDelay: 800, in: { effect: 'fadeInLeft', delayScale: 0.4} });
-        $('.website_contruction').textillate({ initialDelay: 1200, in: { effect: 'bounceInLeft', delayScale: 0.9} });
+        $('.welcome').textillate({ initialDelay: 320, in: { effect: 'fadeInRight', sync: true} });
+        $('.this_is').textillate({ initialDelay: 320, in: { effect: 'fadeInRight', sync: true} });
+        $('.website_contruction').textillate({ initialDelay: 320, in: { effect: 'fadeInRight', sync: true, delayScale: 0} });
 
 
       })
@@ -72,54 +72,6 @@
 
       );
 
-      // portfolio filter
-
-      $(function () {
-
-        var filterList = {
-
-          init: function () {
-
-            // MixItUp plugin
-            // http://mixitup.io
-            $('#portfoliolist').mixitup({
-              targetSelector: '.portfolio',
-              filterSelector: '.filter',
-              effects: ['fade'],
-              easing: 'snap',
-              // call the hover effect
-              onMixEnd: filterList.hoverEffect()
-            });
-
-          },
-
-          hoverEffect: function () {
-
-            // Simple parallax effect
-            $('#portfoliolist .portfolio').hover(
-              function () {
-                $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-                $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
-              },
-              function () {
-                $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-                $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
-              }
-            );
-
-          }
-
-        };
-
-        // Run the show!
-        filterList.init();
-
-
-      });
-
-
-      // Skillset js
-
       var object = [
 
         {
@@ -154,9 +106,46 @@
 
           $('.main_header').addClass('sticky2');
 
+          //Code parallax for divs in tabs
           $(window).on('shown.bs.tab', function() {
             $(window).trigger('resize.px.parallax');
           });
+
+
+          //Jquery Validator
+          $.validate({
+           modules : 'security',
+           onSuccess : function($form) {
+              var url = "../sendMail.php";
+             $.ajax({
+                 type: "POST",
+                 url: url,
+                 data: $(".emailContact").serialize(),
+                 success: function(data)
+                 {
+                   //$('#resp').html(data);
+                   alert('Tu mensaje fue enviado correctamente');
+                   $($form)[0].reset();
+                 }
+             });
+
+              return false; // Will stop the submission of the form
+           },
+
+           onError : function($form) {
+              //return false; // Will stop the submission of the form
+           },
+          });
+
+
+      });
+
+      //Projects
+
+      $(document).ready(function(){
+        //var kindProject = ["logo", "Combo/Highlight Video", "WebPlatform", "Tutorial Video", "Web Support", "AMV"];
+        //var logeKindProject=["img/logos/html.png","img/logos/youtube.png","img/logos/editor.png"];
+
 
       });
 
